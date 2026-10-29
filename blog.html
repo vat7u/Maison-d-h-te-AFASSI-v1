@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le journal — Maison d'hôtes Afassi</title>
+  <meta name="description" content="Le journal de la Maison d'hôtes Afassi : conseils de voyage, cuisine, balades et routes à moto autour de Chefchaouen.">
+  <link rel="icon" href="ds/assets/logo-mark.png">
+  <link rel="stylesheet" href="ds/styles.css?v=21">
+  <link rel="stylesheet" href="styles.css?v=21">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-logo">
+    <a href="index.html"><img src="ds/assets/logo.png" alt="Maison d'hôtes Afassi" width="1305" height="558"></a>
+  </div>
+  <div class="nav-row">
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#histoire">Notre histoire</a>
+      <a href="index.html#chambres">Chambres</a>
+      <a href="index.html#avis">Avis</a>
+      <a href="blog.html" class="active" aria-current="page">Journal</a>
+      <a href="index.html#reserver">Réserver</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-social">
+      <a href="https://www.instagram.com/maisondhotesafassi10/" aria-label="Instagram (nouvelle fenêtre)" target="_blank" rel="noopener"><i class="icon-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.tripadvisor.fr/Hotel_Review-g304013-d25357271-Reviews-Maison_D_hotes_Afassi-Chefchaouen_Tanger_Tetouan_Al_Hoceima.html" aria-label="Tripadvisor (nouvelle fenêtre)" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="13.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="13.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="13.5" r="1.1" fill="currentColor"/><circle cx="17" cy="13.5" r="1.1" fill="currentColor"/><path d="M1.5 8.8h3.6C7.2 7.3 9.5 6.6 12 6.6s4.8.7 6.9 2.2h3.6l-1.7 2.1M1.5 8.8l1.7 2.1M10.6 13.5 12 15.8l1.4-2.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Langue">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <p class="af-label hero-eyebrow">Le journal</p>
+    <h1>
+      <span class="af-display page-hero-caps">Carnets</span>
+      <span class="af-script page-hero-script">de la ville bleue</span>
+    </h1>
+    <p class="page-hero-text">Conseils de voyage, recettes, balades et routes à moto : ce que nous aimons partager avec nos hôtes.</p>
+  </section>
+
+  <section class="journal">
+    <div class="container">
+      <div class="tabs" id="tabs" role="tablist" aria-label="Catégories"></div>
+      <div id="featured"></div>
+      <div class="post-grid" id="post-grid"></div>
+      <p class="empty" id="empty" hidden>Aucun article dans cette catégorie pour le moment.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-grid">
+    <div>
+      <h4>Horaires</h4>
+      <p><b>Réception</b> : 8h – 22h</p>
+      <p><b>Petit-déjeuner</b> : 8h – 11h</p>
+      <p><b>Check-in</b> : dès 14h</p>
+      <p><b>Check-out</b> : avant 11h</p>
+    </div>
+    <div>
+      <h4>Liens</h4>
+      <p><a href="index.html#histoire">Notre histoire</a></p>
+      <p><a href="index.html#chambres">Chambres</a></p>
+      <p><a href="blog.html">Journal</a></p>
+      <p><a href="index.html#reserver">Réserver</a></p>
+    </div>
+    <div>
+      <h4>Nous trouver</h4>
+      <p>Médina de Chefchaouen</p>
+      <p>Chefchaouen, Maroc</p>
+      <p><a href="tel:+212612345678">+212 6 12 34 56 78</a></p>
+      <p><a href="mailto:hello@afassi.ma">hello@afassi.ma</a></p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><i class="icon-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/maisondhotesafassi10/" aria-label="Instagram (nouvelle fenêtre)" target="_blank" rel="noopener"><i class="icon-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© <span id="year">2026</span> Maison d'hôtes Afassi</span>
+    <span aria-hidden="true">|</span><a href="#">Mentions légales</a>
+    <span aria-hidden="true">|</span><a href="#">Confidentialité</a>
+  </div>
+</footer>
+
+<script src="blog/posts.js?v=21"></script>
+<script src="blog/blog.js?v=21"></script>
+<script src="site.js?v=21"></script>
+<script>
+  const categories = ['Toutes', ...new Set(AFASSI_POSTS.map(p => p.category))];
+  const tabs = document.getElementById('tabs');
+  const params = new URLSearchParams(location.search);
+  let current = categories.includes(params.get('cat')) ? params.get('cat') : 'Toutes';
+
+  function render() {
+    tabs.innerHTML = categories.map(c =>
+      `<button type="button" role="tab" aria-selected="${c === current}" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</button>`
+    ).join('');
+
+    const list = AFASSI_POSTS.filter(p => current === 'Toutes' || p.category === current);
+    const [first, ...rest] = list;
+    const featured = current === 'Toutes' && first;
+
+    document.getElementById('featured').innerHTML = featured ? `
+      <article class="featured fade">
+        <a href="${postUrl(first)}" class="featured-photo"><img src="${escapeHtml(first.image)}" alt="${escapeHtml(first.alt)}"></a>
+        <div class="featured-body">
+          <p class="post-meta">À la une · ${escapeHtml(first.category)} · <time datetime="${first.date}">${formatDate(first.date)}</time></p>
+          <h2 class="featured-title"><a href="${postUrl(first)}">${escapeHtml(first.title)}</a></h2>
+          <p class="featured-excerpt">${escapeHtml(first.excerpt)}</p>
+          <a href="${postUrl(first)}" class="btn btn-outline">Lire l'article</a>
+        </div>
+      </article>` : '';
+
+    const gridPosts = featured ? rest : list;
+    document.getElementById('post-grid').innerHTML = gridPosts.map(postCard).join('');
+    document.getElementById('empty').hidden = list.length > 0;
+    observeFades();
+  }
+
+  tabs.addEventListener('click', e => {
+    const btn = e.target.closest('[data-cat]');
+    if (!btn) return;
+    current = btn.dataset.cat;
+    history.replaceState(null, '', current === 'Toutes' ? 'blog.html' : 'blog.html?cat=' + encodeURIComponent(current));
+    render();
+  });
+  render();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Agent tooling installed on this machine (symlinks and skill copies, not part of the site)
+.agents/
+.claude/skills/
+skills-lock.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
